@@ -1,0 +1,24 @@
+Character LCD Setup and Config
+
+
+https://learn.adafruit.com/drive-a-16x2-lcd-directly-with-a-raspberry-pi/wiring
+
+	LCD	Pi
+Pin 	1	GND
+	2	+5V
+	3	middle of potentiometer
+	4	21
+	5	GND
+	6	22
+	11	25
+	12	24
+	13	23
+	14	18
+	15	+5V
+
+sudo apt-get install python-dev build-essential python-smbus python-pip
+sudo easy_install -U distribute
+sudo pip install RPI.GPIO
+git clone git://github.com/adafruit/Adafruit_Python_CharLCD
+cd Adafruit_Python_CharLCD/
+sudo python ./setup.py install

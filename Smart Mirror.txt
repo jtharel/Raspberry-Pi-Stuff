@@ -1,0 +1,15 @@
+Smart Mirror
+
+sudo apt-get install apache2 apache2-doc apache2-utils libapache2-mod-php5 php5 php-pear php5-xcache chromium x11-xserver-utils unclutter 
+	#chromium may be chromium-browser depending on distro. Plus Chromium is default browser in newer disto
+
+Edit the /etc/xdg/lxsession/LXDE-pi/autostart file and make the following changes: #path maybe LXDE or LXDE-pi
+	#xscreensaver -no-splash
+	@xset s off
+	@xset -dpms
+	@xset s noblank
+	@chromium --kiosk --incognito http://localhost
+
+	# comment out xscreensaver -no-splash and add the next 4 lines
+
+

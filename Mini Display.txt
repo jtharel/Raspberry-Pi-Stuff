@@ -1,0 +1,24 @@
+Mini - Display
+
+rotate display 180 degrees:
+edit /boot/config.txt
+	display_rotate=2
+
+Install xinput_calibrator to fix touch screen:
+sudo apt-get install libx11-dev libxext-dev libxi-dev x11proto-input-dev
+wget http://github.com/downloads/tias/xinput_calibrator/xinput_calibrator-0.7.5.tar.gz
+tar -xzvf xinput_calibrator-0.7.5.tar.gz
+cd xinput_calibrator-0.7.5
+./configure
+make 
+sudo make install
+reboot
+xinput_calibrator
+
+mkdir /etc/X11/xorg.conf.d
+vi /etc/X11/xorg.conf.d/99-calibration.conf  insert:
+	Section "InputClass"
+		Identifier	"calibration"
+		MatchProduct	"FT5406 memory based driver"
+		Option	"Calibration"	"796 2 466 -8"
+	EndSection
