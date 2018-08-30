@@ -75,8 +75,8 @@ apt-get install ssmtp mailutils mpack
    rewriteDomain=gmail.com  	#is this change needed?
    hostname=gmail.com		#is this change needed?
    FromLineOverride=YES
-   AuthUser=jtharel@gmail.com
-   AuthPass=IheartBr@d
+   AuthUser=user@gmail.com
+   AuthPass=blahblahIheartBr@d
    UseSTARTTLS=YES
 #send attachment:
    mpack -s "test" ./intruder.jpg user@aol.com
